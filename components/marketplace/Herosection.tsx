@@ -24,29 +24,31 @@ export function HeroSection() {
 
         {/* Right Content - Featured NFT */}
         <div className="md:w-1/2 flex justify-center">
-          <div className="bg-gray-900 p-4 rounded-xl shadow-xl w-80 border border-blue-500">
+          <div className=" p-4 rounded-xl w-90">
             {/* NFT Image with Hover Effect */}
-            <div className="overflow-hidden rounded-lg">
+            <div className="relative w-90 h-90">
+              <div className="absolute -top-4 -left-4 w-full h-full bg-blue-200 rounded-lg shadow-lg transform rotate-3"></div>
+              <div className="absolute -top-2 -left-2 w-full h-full bg-blue-300 rounded-lg shadow-md transform rotate-1"></div>
               <Image
                 src={featuredNFT}
                 alt="Featured NFT"
-                width={320}
-                height={320}
-                className="rounded-lg transition-transform duration-300 hover:scale-105"
+                width={400}
+                height={400}
+                className="relative w-full h-full object-cover rounded-lg shadow-xl transition-transform duration-300 hover:scale-105"
               />
+              {/* <h3 className="text-xl font-semibold text-blue-600">
+                "Blue Horizon"
+              </h3> */}
             </div>
 
             {/* NFT Details */}
-            <div className="mt-4">
-              <h3 className="text-xl font-semibold text-blue-400">
-                "Blue Horizon"
-              </h3>
+            {/* <div className="mt-4">
               <p className="text-gray-400 text-sm my-2">
                 By{" "}
                 <span className="text-blue-400 font-medium">@NFT_Artist</span>
               </p>
               <p className="text-gray-400 text-sm">Created on March 3, 2025</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

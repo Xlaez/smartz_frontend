@@ -1,4 +1,4 @@
-import {heroui} from "@heroui/theme"
+import { heroui } from "@heroui/theme"
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,6 +13,7 @@ module.exports = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
+
     },
   },
   darkMode: "class",

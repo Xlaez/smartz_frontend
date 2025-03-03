@@ -5,30 +5,24 @@ import { Link } from "@heroui/link";
 import { IoWalletOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/icons";
-import LoginModal from "./loginModal";
+import { RiNftLine } from "react-icons/ri";
 import { useDisclosure } from "@heroui/modal";
+import CreateNftModal from "./CreateNftModal";
 
-export const NavBar = () => {
+export const CreatorNavBar = () => {
   const pathname = usePathname();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const handleConnectWallet = () => {
-    onOpen();
-  };
   const Links = [
     {
-      label: "Marketplace",
-      href: "/",
-    },
-    {
-      label: "Collections",
-      href: "/collector/collections",
-    },
-    {
-      label: "Profile",
-      href: "/collector/profile",
+      label: "Overview",
+      href: "/creator",
     },
   ];
+
+  const handleCreateNFT = () => {
+    onOpen();
+  };
   return (
     <Navbar className="py-4">
       <NavbarBrand>
@@ -51,19 +45,17 @@ export const NavBar = () => {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
-            // as={Link}
             color="primary"
-            onPress={handleConnectWallet}
-            startContent={<IoWalletOutline size={24} />}
-            // href="#"
+            startContent={<RiNftLine size={24} />}
+            onPress={handleCreateNFT}
             variant="flat"
           >
-            Connect Wallet
+            Create NFT
           </Button>
         </NavbarItem>
       </NavbarContent>
 
-      <LoginModal isOpen={isOpen} onClose={onClose} />
+      <CreateNftModal isOpen={isOpen} onClose={onClose} />
     </Navbar>
   );
 };

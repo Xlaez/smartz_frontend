@@ -1,3 +1,4 @@
+// "use client";
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@heroui/link";
@@ -8,6 +9,9 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { NavBar } from "@/components/navbar";
+// import { usePathname } from "next/navigation";
+import { CreatorNavBar } from "./creator/components/Navbar";
+import NavbarWrapper from "./navbarWrapper";
 
 export const metadata: Metadata = {
   title: {
@@ -43,7 +47,7 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
-            <NavBar />
+            <NavbarWrapper />
             <main className="container mx-auto max-w-7xl px-6 flex-grow">
               {children}
             </main>

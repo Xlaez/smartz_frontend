@@ -4,7 +4,8 @@ import { Tabs, Tab } from "@heroui/tabs";
 import { Button } from "@heroui/button";
 import { Card, CardBody } from "@heroui/card";
 import { Input } from "@heroui/input";
-import { FiCamera, FiUser } from "react-icons/fi";
+import { FiCamera } from "react-icons/fi";
+import { CiAt } from "react-icons/ci";
 
 const LoginModal = ({
   isOpen,
@@ -53,7 +54,7 @@ const LoginModal = ({
                       type="text"
                       placeholder="Enter Username"
                       value={username}
-                      startContent={<FiUser className="text-gray-500" />}
+                      startContent={<CiAt className="text-gray-500" />}
                       onChange={(e) => setUsername(e.target.value)}
                     />
 
@@ -93,7 +94,7 @@ const LoginModal = ({
                       type="text"
                       placeholder="Enter Username"
                       value={username}
-                      startContent={<FiUser className="text-gray-500" />}
+                      startContent={<CiAt className="text-gray-500" />}
                       onChange={(e) => setUsername(e.target.value)}
                     />
 

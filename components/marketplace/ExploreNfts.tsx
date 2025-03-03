@@ -88,7 +88,23 @@ const nftData = [
   },
 ];
 
-function NFTCard({ id, image, name, creator, date, price, description }: any) {
+export function NFTCard({
+  id,
+  image,
+  name,
+  creator,
+  date,
+  price,
+  description,
+}: {
+  id: any;
+  image: any;
+  name: any;
+  creator: any;
+  date: any;
+  price: any;
+  description: any;
+}) {
   const [selectedNFT, setSelectedNFT] = useState(null);
   const [isModalOpen, setModalOpen] = useState(false);
 

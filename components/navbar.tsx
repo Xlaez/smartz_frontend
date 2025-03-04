@@ -7,6 +7,9 @@ import { usePathname } from "next/navigation";
 import { Logo } from "@/components/icons";
 import LoginModal from "./loginModal";
 import { useDisclosure } from "@heroui/modal";
+//@ts-expect-error
+import { ConnectWallet } from "@coinbase/onchainkit/wallet";
+
 
 export const NavBar = () => {
   const pathname = usePathname();
@@ -50,7 +53,8 @@ export const NavBar = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button
+          <ConnectWallet className={`py-5 text-lg bg-[#695dd6] text-[#8896e6] font-semibold rounded-full hover:bg-blue-500 transition px-[80px]`} />
+          {/* <Button
             // as={Link}
             color="primary"
             onPress={handleConnectWallet}
@@ -59,7 +63,7 @@ export const NavBar = () => {
             variant="flat"
           >
             Connect Wallet
-          </Button>
+          </Button> */}
         </NavbarItem>
       </NavbarContent>
 
